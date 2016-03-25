@@ -6,10 +6,11 @@ If OR nickname or hash mentioned, the information is accordingly used.
 Otherwise, random selection of 3 ORs out of the cached network consensus is used.
 """
 
-def main():
-    from stem import CircStatus
-    from stem.control import Controller
+from stem import CircStatus
+from stem.control import Controller
 
+
+def main():    
     with Controller.from_port(port = 9051) as controller:
         controller.authenticate("")
         for circ in sorted(controller.get_circuits()):

@@ -10,7 +10,9 @@ import stem.control
 import sys
 import random
 
+
 routers = []
+
 
 def routers_rand():
     global routers
